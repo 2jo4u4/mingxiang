@@ -1,0 +1,133 @@
+$headerBg: rgb(255, 255, 255);
+
+header {
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: $headerBg;
+  height: 56px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  box-shadow: 0px 0px 10px #0000006b;
+  z-index: 999;
+
+  > .logo {
+    &,
+    :active,
+    :link,
+    :visited,
+    :hover {
+      text-decoration: none;
+      color: #000;
+    }
+    > div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      > img {
+        height: 100%;
+      }
+      > span {
+        margin-left: 8px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  > nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.swiper {
+  position: relative;
+  margin-top: 56px;
+  height: 50vh;
+  min-height: 30vw;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.swiperTool {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+
+  > .dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    background-color: rgb(95, 95, 95);
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .actived {
+    background-color: #fff;
+  }
+}
+
+footer {
+  z-index: 998;
+  padding: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: $headerBg;
+  height: 30vh;
+
+  > p {
+    margin: 8px 0;
+    font-size: 1.2rem;
+  }
+  > .scoial > img {
+    cursor: pointer;
+    margin: 4px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .swiper {
+    height: calc(100vh - 56px);
+  }
+
+  footer {
+    > p {
+      margin: 4px 0;
+      font-size: 1rem;
+    }
+    > .scoial > img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  header {
+    width: 300px;
+    > div > .logo > div > span {
+      display: none;
+    }
+  }
+  footer {
+    width: 300px;
+  }
+}
