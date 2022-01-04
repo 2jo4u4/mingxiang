@@ -1,0 +1,51 @@
+{
+  "logo": {
+    "text": "Mingxiang",
+    "uri": "https://angular.tw/assets/images/logos/angular/shield-large.svg",
+    "alt": "商標"
+  },
+  "contact": {
+    "address": {
+      "link": "https://www.google.com.tw/maps",
+      "text": "地址"
+    },
+    "phone": "+886910123123",
+    "email": "example@example.com",
+    "author": "版權所有",
+    "scoial": [
+      {
+        "uri": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+        "alt": "facebook",
+        "link": "https://facebook.com"
+      },
+      {
+        "uri": "https://cdn-icons-png.flaticon.com/512/124/124027.png",
+        "alt": "line",
+        "link": "https://line.me/"
+      }
+    ]
+  },
+  "swiper": {
+    "loopTime": 3000,
+    "swiperDistence": 200,
+    "limitWith": 100,
+    "images": [
+      {
+        "alt": "首頁輪播圖1",
+        "uri": "https://drscdn.500px.org/photo/49283436/q%3D80_m%3D1500/v2?sig=1ed2028934ebb3ef7d35957aa25987ef4c3f28d17da2c56e3f748232828393d3"
+      },
+      {
+        "alt": "首頁輪播圖2",
+        "uri": "https://drscdn.500px.org/photo/94580949/m%3D2048_of%3D1/v2?sig=bb76fc1017c80b49acfe0f2ae1ed2acb2b0e4d7ad512f3e3249ac67ab79ea399"
+      },
+      {
+        "alt": "首頁輪播圖3",
+        "uri": "https://drscdn.500px.org/photo/79429799/q%3D80_m%3D2000/v2?sig=e67117a9ccabb75cbeb013dcc5426655789a7c1714647bf8456463c414f8b28a"
+      },
+      {
+        "alt": "首頁輪播圖4",
+        "uri": "../assets/test.jpg"
+      }
+    ]
+  }
+}

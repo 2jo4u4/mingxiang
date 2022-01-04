@@ -36,9 +36,20 @@ $mingxiang-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  --primary: $mingxiang-primary;
+  --accent: $mingxiang-accent;
+  --warn: $mingxiang-warn;
+  --backgroud: rgb(250, 250, 250);
+  --border: rgb(230, 230, 230);
+}
+
 html,
 body {
-  height: 100%;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  scrollbar-width: none;
 }
 body {
   margin: 0;

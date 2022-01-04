@@ -1,8 +1,8 @@
 <header>
   <a routerLink="/" class="logo">
     <div>
-      <img src="https://angular.tw/assets/images/logos/angular/shield-large.svg" alt="logo" />
-      <span>Mingxiang</span>
+      <img [src]="logo.uri" [alt]="logo.alt" />
+      <span>{{ logo.text }}</span>
     </div>
   </a>
   <nav>
@@ -12,8 +12,15 @@
 </header>
 
 <div class="swiper">
-  <img [src]="image.uri" [alt]="image.alt" width="100%" height="100%" />
-  <div class="swiperTool">
+  <div id="swiper-img-div">
+    <div id="swiper-img-group">
+      <ng-container *ngFor="let img of imgList; let index = index">
+        <img [src]="img.uri" [alt]="img.alt" />
+      </ng-container>
+    </div>
+  </div>
+  <div id="swiper-mask"></div>
+  <div class="swiper-tool">
     <ng-container *ngFor="let dot of imgList; let index = index">
       <div class="dot" [class]="index === imageIndex ? 'actived' : ''" (click)="onChangeImage(index)"></div>
     </ng-container>
@@ -25,10 +32,24 @@
 </main>
 <footer>
   <div class="scoial">
-    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="facebook" />
-    <img src="https://cdn-icons-png.flaticon.com/512/124/124027.png" alt="line" />
+    <ng-container *ngFor="let item of contact.scoial">
+      <a *ngIf="item.link" target="_blank" [href]="item.link"><img [src]="item.uri" [alt]="item.alt" /></a>
+      <img *ngIf="!item.link" [src]="item.uri" [alt]="item.alt" />
+    </ng-container>
   </div>
-  <p>連絡電話</p>
-  <p>地址</p>
-  <p>版權所有</p>
+  <p>
+    連絡電話: <a [href]="'tel:' + contact.phone">{{ contact.phone }}</a>
+  </p>
+  <p>
+    地址:
+    <a *ngIf="contact.address.link; else address" [href]="contact.address.link" target="_blank">{{
+      contact.address.text
+    }}</a>
+    <ng-template #address>{{ contact.address.text }}</ng-template>
+  </p>
+  <p>
+    電子信箱: <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+  </p>
+
+  <p>{{ contact.author }}</p>
 </footer>

@@ -1,1 +1,2 @@
-Mingxiang
+User-agent: *
+Allow: /
