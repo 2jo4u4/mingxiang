@@ -8,9 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ErrorComponent } from './error/error.component';
 import { MatButtonModule } from '@angular/material/button';
+import { SwiperComponent } from './component/swiper/swiper.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, ErrorComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, ErrorComponent, SwiperComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,

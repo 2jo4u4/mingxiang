@@ -1,0 +1,15 @@
+<div class="swiper">
+  <div id="swiper-img-div">
+    <div id="swiper-img-group">
+      <ng-container *ngFor="let img of imgList; let index = index">
+        <img [src]="img.uri" [alt]="img.alt" />
+      </ng-container>
+    </div>
+  </div>
+  <div id="swiper-mask"></div>
+  <div class="swiper-tool">
+    <ng-container *ngFor="let dot of imgList; let index = index">
+      <div class="dot" [class.actived]="index === imageIndex" (click)="onChangeImage(index)"></div>
+    </ng-container>
+  </div>
+</div>

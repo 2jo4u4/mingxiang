@@ -14,7 +14,7 @@
     "author": "版權所有",
     "scoial": [
       {
-        "uri": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+        "uri": "assets/scioal/fb.png",
         "alt": "facebook",
         "link": "https://facebook.com"
       },
@@ -44,7 +44,7 @@
       },
       {
         "alt": "首頁輪播圖4",
-        "uri": "../assets/test.jpg"
+        "uri": "assets/test.jpg"
       }
     ]
   }
